@@ -36,3 +36,12 @@ The results obtained differ depending on the experiments, if the variables obser
 The different results help to have more confidence in the system's ability to maintain behavior in the presence of variables, or show that the system  has a weakness and suggests a path for improvement.
 Netflix is not the only company using chaos engineering, for example there is google, amazon, microsoft and facebook that use it as well.
 These experiments could be performed in other companies, such as e-commerce by checking the number of purchases per second or ad-services companie by checking the numbers of ads viewed by users per seconds.The same kind of experiments could be performed like shutting down servers.
+
+4.Having a formal specification enables the language to nearly be an executable specification and to have a clean design. This leads to traduction in bytecode and its execution extremely fast.
+The formal aspect of WebAssembly includes a proof of soundness, which is the "absence of undefined behavior in the execution semantics".
+Testing is still important because the language only approximates executable specification, and in WebAssembly, it is possible to test the specification to be sure the program is validated. Some programs use mathematically unproved calculations, meaning the tests are the only solution to this.
+Also, proving the correctness of a program is really hard, thus the models which the formal methods are based on can differentiate from the machines executing the programs.
+
+5.The main advantage of mechanisation is to reveal some flaws in language specifications by using mathematical formulas. Even though the first paper specified that the language was soundness prooved, The author of this second paper helped to change WebAssembly in a way which guarantees proof of soundness with the use of Isabelle.
+The other artefacts derived from the mechanised specification are an executable interpreter and a type checker, the former which helped to prove the specification of WebAssembly by first successfully passing all WebAssembly core language conformance tests, then by being tested against other WebAssembly engines.
+This mechanisation does not remove the need of testing because although soundness has been proved, it doesn't prevent the language from having unwanted behaviours depending on the machines and environments.
