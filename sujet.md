@@ -44,4 +44,4 @@ Also, proving the correctness of a program is really hard, thus the models which
 
 5.The main advantage of mechanisation is to reveal some flaws in language specifications by using mathematical formulas. Even though the first paper specified that the language was soundness prooved, The author of this second paper helped to change WebAssembly in a way which guarantees proof of soundness with the use of Isabelle.
 The other artefacts derived from the mechanised specification are an executable interpreter and a type checker, the former which helped to prove the specification of WebAssembly by first successfully passing all WebAssembly core language conformance tests, then by being tested against other WebAssembly engines.
-This mechanisation does not remove the need of testing because although soundness has been proved, it doesn't prevent the language from having unwanted behaviours depending on the machines and environments.
+This mechanisation does not remove the need of testing because although soundness has been proved, it doesn't prevent the language from having unwanted behaviours based on the specification in edge cases.
